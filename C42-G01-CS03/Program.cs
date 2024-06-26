@@ -116,12 +116,24 @@
 
             #region Question 6
 
+            //Console.Write("Please Enter a Number: ");
+
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            //for (int i = 1; i <= Number; i++)
+            //    Console.Write($"{i}, ");
+
+            #endregion
+
+
+            #region Question 7
+
             Console.Write("Please Enter a Number: ");
 
             int Number = int.Parse(Console.ReadLine() ?? "0");
 
-            for (int i = 1; i <= Number; i++)
-                Console.Write($"{i}, ");
+            for (int i = 1; i <= 12; i++)
+                Console.Write($"{i * Number} ");
 
             #endregion
 
