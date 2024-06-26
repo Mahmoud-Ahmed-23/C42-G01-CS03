@@ -327,36 +327,58 @@ namespace C42_G01_CS03
 
             #region Question 17
 
-            Console.WriteLine("Enter Three points (x,y): ");
+            //Console.WriteLine("Enter Three points (x,y): ");
 
-            int[] X = new int[3];
+            //int[] X = new int[3];
 
-            int[] Y = new int[3];
+            //int[] Y = new int[3];
 
-            bool flayX = true;
-            bool flayY = true;
+            //bool flayX = true;
+            //bool flayY = true;
 
-            for (int i = 0; i < 3; i++)
-            {
-                X[i] = int.Parse(Console.ReadLine() ?? "0");
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    X[i] = int.Parse(Console.ReadLine() ?? "0");
 
-                Y[i] = int.Parse(Console.ReadLine() ?? "0");
+            //    Y[i] = int.Parse(Console.ReadLine() ?? "0");
 
-                if (i != 0 && X[i] != X[i - 1])
-                    flayX = false;
+            //    if (i != 0 && X[i] != X[i - 1])
+            //        flayX = false;
 
-                if (i != 0 && Y[i] != Y[i - 1])
-                    flayY = false;
-            }
+            //    if (i != 0 && Y[i] != Y[i - 1])
+            //        flayY = false;
+            //}
 
-            if (flayX || flayY)
-                Console.WriteLine("these points 'lie on a single straight line'");
-            else
-                Console.WriteLine("these points 'Not lie on a single straight line'");
+            //if (flayX || flayY)
+            //    Console.WriteLine("these points 'lie on a single straight line'");
+            //else
+            //    Console.WriteLine("these points 'Not lie on a single straight line'");
 
 
 
             #endregion
+
+
+            #region Question 18
+
+            Console.WriteLine("Enter the hour Works: ");
+
+            int F_Hour = int.Parse(Console.ReadLine() ?? "0");
+
+            int L_Hour = int.Parse(Console.ReadLine() ?? "0");
+
+            if (L_Hour < 3)
+                Console.WriteLine("they are considered highly efficient.");
+            else if (L_Hour < 4)
+                Console.WriteLine("they are instructed to increase their speed.");
+            else if (L_Hour < 5)
+                Console.WriteLine("they are provided with training to enhance their speed.");
+            else
+                Console.WriteLine("they are required to leave the company.");
+
+
+            #endregion
+
 
 
 
