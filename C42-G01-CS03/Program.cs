@@ -1,4 +1,6 @@
-﻿namespace C42_G01_CS03
+﻿using Microsoft.VisualBasic;
+
+namespace C42_G01_CS03
 {
     internal class Program
     {
@@ -172,27 +174,43 @@
 
             #region Question 10
 
-            Console.Write("Enter the marks of the five subjects: ");
+            //Console.Write("Enter the marks of the five subjects: ");
 
-            int sum = 0;
+            //int sum = 0;
 
-            for (int i = 0; i < 5; i++)
-            {
-                sum += int.Parse(Console.ReadLine() ?? "0");
-            }
-            Console.WriteLine($"Total marks = {sum}");
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    sum += int.Parse(Console.ReadLine() ?? "0");
+            //}
+            //Console.WriteLine($"Total marks = {sum}");
 
-            int avg = sum / 5;
+            //int avg = sum / 5;
 
-            Console.WriteLine($"Average marks = {avg}");
+            //Console.WriteLine($"Average marks = {avg}");
 
-            double perc = (double)sum / 5;
+            //double perc = (double)sum / 5;
 
-            Console.WriteLine($"percentage marks = {perc}");
+            //Console.WriteLine($"percentage marks = {perc}");
 
 
             #endregion
 
+
+            #region Question 11
+
+            Console.Write("Month Number: ");
+
+            int Month=int.Parse(Console.ReadLine() ?? "0");
+
+            if (Month == 2)
+                Console.WriteLine(28);
+            else if (Month == 4 || Month == 6 || Month == 9 || Month == 11)
+                Console.WriteLine(30);
+            else
+                Console.WriteLine(31);
+
+
+            #endregion
 
         }
     }
