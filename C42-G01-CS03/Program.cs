@@ -140,15 +140,32 @@
 
             #region Question 8
 
-            Console.Write("Please Enter The End Loop Number: ");
+            //Console.Write("Please Enter The End Loop Number: ");
 
-            int Number = int.Parse(Console.ReadLine() ?? "0");
-            
-            for (int i = 1; i < Number; i++)
-            {
-                if (i % 2 == 0)
-                    Console.Write($"{i} ");
-            }
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            //for (int i = 1; i < Number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //        Console.Write($"{i} ");
+            //}
+
+            #endregion
+
+
+            #region Question 9
+
+            Console.Write("Please Enter two Numbers: ");
+
+            int Number1 = int.Parse(Console.ReadLine() ?? "0");
+
+            int Number2 = int.Parse(Console.ReadLine() ?? "0");
+
+            int pow = 1;
+            for (int i = 0; i < Number2; i++)
+                pow *= Number1;
+
+            Console.WriteLine(pow);
 
             #endregion
 
