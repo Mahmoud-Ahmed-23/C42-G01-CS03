@@ -24,20 +24,46 @@
 
 
             #region Question 2
-            
-            Console.Write("Please Enter a Number: ");
 
-            int Number = int.Parse(Console.ReadLine() ?? "0");
+            //Console.Write("Please Enter a Number: ");
 
-            if(Number < 0) 
-            {
-                Console.WriteLine("negative");
-            }
-            else
-                Console.WriteLine("positive");
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            //if(Number < 0) 
+            //{
+            //    Console.WriteLine("negative");
+            //}
+            //else
+            //    Console.WriteLine("positive");
 
             #endregion
 
+
+
+            #region Question 3
+
+            int max = int.MinValue; int min = int.MaxValue;
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write($"Please Enter the {i + 1}'s Number: ");
+
+                int Number = int.Parse(Console.ReadLine() ?? "0");
+
+
+
+                if (Number > max)
+                    max = Number;
+
+                if (min > Number)
+                    min = Number;
+            }
+
+            Console.WriteLine($"Max Element = {max}");
+
+            Console.WriteLine($"Min Element = {min}");
+
+            #endregion
 
         }
     }
