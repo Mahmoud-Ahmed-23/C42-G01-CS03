@@ -301,28 +301,63 @@ namespace C42_G01_CS03
 
             #region Question 16
 
-            Console.Write("Enter a number to convert: ");
+            //Console.Write("Enter a number to convert: ");
 
-            int Number = int.Parse(Console.ReadLine() ?? "0");
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
 
-            StringBuilder Binary = new StringBuilder();
-            while (Number != 0) 
+            //StringBuilder Binary = new StringBuilder();
+            //while (Number != 0) 
+            //{
+            //    if (Number % 2 == 0) 
+            //    {
+            //        Binary.Insert(0, "0");
+            //        Number /= 2;
+            //    }
+            //    else 
+            //    {
+            //        Binary.Insert(0, "1");
+            //        Number /= 2;
+            //    }
+
+            //}
+
+            //Console.WriteLine(Binary);
+            #endregion
+
+
+            #region Question 17
+
+            Console.WriteLine("Enter Three points (x,y): ");
+
+            int[] X = new int[3];
+
+            int[] Y = new int[3];
+
+            bool flayX = true;
+            bool flayY = true;
+
+            for (int i = 0; i < 3; i++)
             {
-                if (Number % 2 == 0) 
-                {
-                    Binary.Insert(0, "0");
-                    Number /= 2;
-                }
-                else 
-                {
-                    Binary.Insert(0, "1");
-                    Number /= 2;
-                }
+                X[i] = int.Parse(Console.ReadLine() ?? "0");
 
+                Y[i] = int.Parse(Console.ReadLine() ?? "0");
+
+                if (i != 0 && X[i] != X[i - 1])
+                    flayX = false;
+
+                if (i != 0 && Y[i] != Y[i - 1])
+                    flayY = false;
             }
 
-            Console.WriteLine(Binary);
+            if (flayX || flayY)
+                Console.WriteLine("these points 'lie on a single straight line'");
+            else
+                Console.WriteLine("these points 'Not lie on a single straight line'");
+
+
+
             #endregion
+
 
 
         }
