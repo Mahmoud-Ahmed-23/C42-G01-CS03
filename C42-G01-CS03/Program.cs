@@ -241,15 +241,32 @@ namespace C42_G01_CS03
 
             #region Question 13
 
-            Console.Write("Enter a Word: ");
+            //Console.Write("Enter a Word: ");
 
-            string word = Console.ReadLine() ?? "No Data";
+            //string word = Console.ReadLine() ?? "No Data";
 
-            for (int i = word.Length - 1; i >= 0; i--)
-                Console.Write(word[i]);
+            //for (int i = word.Length - 1; i >= 0; i--)
+            //    Console.Write(word[i]);
 
 
             #endregion
+
+
+            #region Question 14
+
+            Console.Write("Enter a Word: ");
+
+            string Number = Console.ReadLine() ?? "No Data";
+
+            for (int i = Number.Length - 1; i >= 0; i--)
+                Console.Write(Number[i]);
+
+
+
+
+
+            #endregion
+
 
         }
     }
