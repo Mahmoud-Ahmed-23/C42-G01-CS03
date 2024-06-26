@@ -198,19 +198,47 @@ namespace C42_G01_CS03
 
             #region Question 11
 
-            Console.Write("Month Number: ");
+            //Console.Write("Month Number: ");
 
-            int Month=int.Parse(Console.ReadLine() ?? "0");
+            //int Month=int.Parse(Console.ReadLine() ?? "0");
 
-            if (Month == 2)
-                Console.WriteLine(28);
-            else if (Month == 4 || Month == 6 || Month == 9 || Month == 11)
-                Console.WriteLine(30);
-            else
-                Console.WriteLine(31);
+            //if (Month == 2)
+            //    Console.WriteLine(28);
+            //else if (Month == 4 || Month == 6 || Month == 9 || Month == 11)
+            //    Console.WriteLine(30);
+            //else
+            //    Console.WriteLine(31);
 
 
             #endregion
+
+
+            #region Question 12
+
+            Console.Write("Enter a number: ");
+
+            int Left = int.Parse(Console.ReadLine() ?? "0");
+
+            Console.Write("Enter (+,-,*,/): ");
+
+            char Sep = char.Parse(Console.ReadLine() ?? "0");
+
+            Console.Write("Enter a number: ");
+
+            int Right = int.Parse(Console.ReadLine() ?? "0");
+
+            if (Sep == '+')
+                Console.WriteLine(Left + Right);
+            else if (Sep == '-')
+                Console.WriteLine(Left - Right);
+            else if (Sep == '*')
+                Console.WriteLine(Left * Right);
+            else
+                Console.WriteLine(Left / Right);
+
+            #endregion
+
+
 
         }
     }
