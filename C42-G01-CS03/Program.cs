@@ -128,12 +128,27 @@
 
             #region Question 7
 
-            Console.Write("Please Enter a Number: ");
+            //Console.Write("Please Enter a Number: ");
+
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            //for (int i = 1; i <= 12; i++)
+            //    Console.Write($"{i * Number} ");
+
+            #endregion
+
+
+            #region Question 8
+
+            Console.Write("Please Enter The End Loop Number: ");
 
             int Number = int.Parse(Console.ReadLine() ?? "0");
-
-            for (int i = 1; i <= 12; i++)
-                Console.Write($"{i * Number} ");
+            
+            for (int i = 1; i < Number; i++)
+            {
+                if (i % 2 == 0)
+                    Console.Write($"{i} ");
+            }
 
             #endregion
 
