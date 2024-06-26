@@ -215,30 +215,41 @@ namespace C42_G01_CS03
 
             #region Question 12
 
-            Console.Write("Enter a number: ");
+            //Console.Write("Enter a number: ");
 
-            int Left = int.Parse(Console.ReadLine() ?? "0");
+            //int Left = int.Parse(Console.ReadLine() ?? "0");
 
-            Console.Write("Enter (+,-,*,/): ");
+            //Console.Write("Enter (+,-,*,/): ");
 
-            char Sep = char.Parse(Console.ReadLine() ?? "0");
+            //char Sep = char.Parse(Console.ReadLine() ?? "0");
 
-            Console.Write("Enter a number: ");
+            //Console.Write("Enter a number: ");
 
-            int Right = int.Parse(Console.ReadLine() ?? "0");
+            //int Right = int.Parse(Console.ReadLine() ?? "0");
 
-            if (Sep == '+')
-                Console.WriteLine(Left + Right);
-            else if (Sep == '-')
-                Console.WriteLine(Left - Right);
-            else if (Sep == '*')
-                Console.WriteLine(Left * Right);
-            else
-                Console.WriteLine(Left / Right);
+            //if (Sep == '+')
+            //    Console.WriteLine(Left + Right);
+            //else if (Sep == '-')
+            //    Console.WriteLine(Left - Right);
+            //else if (Sep == '*')
+            //    Console.WriteLine(Left * Right);
+            //else
+            //    Console.WriteLine(Left / Right);
 
             #endregion
 
 
+            #region Question 13
+
+            Console.Write("Enter a Word: ");
+
+            string word = Console.ReadLine() ?? "No Data";
+
+            for (int i = word.Length - 1; i >= 0; i--)
+                Console.Write(word[i]);
+
+
+            #endregion
 
         }
     }
