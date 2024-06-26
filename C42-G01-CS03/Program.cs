@@ -69,21 +69,61 @@
 
             #region Question 4
 
-            Console.Write("Please Enter a Number: ");
+            //Console.Write("Please Enter a Number: ");
 
-            int Number = int.Parse(Console.ReadLine() ?? "0");
+            //int Number = int.Parse(Console.ReadLine() ?? "0");
 
-            if (Number % 2 == 0)
-                Console.WriteLine("Number is Even");
-            else
-                Console.WriteLine("Number is Odd");
+            //if(Number %2 == 0)
+            //    Console.WriteLine("Number is Even");
+            //else
+            //    Console.WriteLine("Number is Odd");
 
             #endregion
 
 
+            #region Question 5
+
+            //Console.Write("Please Enter a charcter: ");
+
+            //char alph = char.Parse(Console.ReadLine() ?? "");
+
+            //switch (alph)
+            //{
+            //    case 'a' :
+            //        goto case 'u';
+
+            //    case 'e':
+            //        goto case 'u';
+
+            //    case 'i':
+            //        goto case 'u';
+
+            //    case 'o':
+            //        goto case 'u';
+
+            //    case 'u':
+            //        Console.WriteLine("Vowel");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("consonant");
+            //        break;
+
+            //}
+
+            #endregion
 
 
+            #region Question 6
 
+            Console.Write("Please Enter a Number: ");
+
+            int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            for (int i = 1; i <= Number; i++)
+                Console.Write($"{i}, ");
+
+            #endregion
 
         }
     }
