@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using System.Text;
 
 namespace C42_G01_CS03
 {
@@ -270,31 +271,57 @@ namespace C42_G01_CS03
 
             #region Question 15
 
-            Console.Write("starting number of range: ");
+            //Console.Write("starting number of range: ");
 
-            int Start = int.Parse(Console.ReadLine() ?? "0");
+            //int Start = int.Parse(Console.ReadLine() ?? "0");
 
-            Console.Write("Ending number of range: ");
+            //Console.Write("Ending number of range: ");
 
-            int End = int.Parse(Console.ReadLine() ?? "0");
+            //int End = int.Parse(Console.ReadLine() ?? "0");
 
-            Console.WriteLine($"The prime number between {Start} and {End} are: ");
-            for (int i = Start; i <= End; i++)
+            //Console.WriteLine($"The prime number between {Start} and {End} are: ");
+            //for (int i = Start; i <= End; i++)
+            //{
+            //    bool flag = true;
+            //    for (int j = 2; j < i; j++)
+            //    {
+            //        if (i % j == 0)
+            //        {
+            //            flag = false;
+            //            break;
+            //        }
+            //    }
+            //    if (flag && i > 1) 
+            //        Console.Write($"{i} ");
+            //}
+
+
+            #endregion
+
+
+            #region Question 16
+
+            Console.Write("Enter a number to convert: ");
+
+            int Number = int.Parse(Console.ReadLine() ?? "0");
+
+            StringBuilder Binary = new StringBuilder();
+            while (Number != 0) 
             {
-                bool flag = true;
-                for (int j = 2; j < i; j++)
+                if (Number % 2 == 0) 
                 {
-                    if (i % j == 0)
-                    {
-                        flag = false;
-                        break;
-                    }
+                    Binary.Insert(0, "0");
+                    Number /= 2;
                 }
-                if (flag && i > 1) 
-                    Console.Write($"{i} ");
+                else 
+                {
+                    Binary.Insert(0, "1");
+                    Number /= 2;
+                }
+
             }
 
-
+            Console.WriteLine(Binary);
             #endregion
 
 
