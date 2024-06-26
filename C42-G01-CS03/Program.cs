@@ -254,15 +254,45 @@ namespace C42_G01_CS03
 
             #region Question 14
 
-            Console.Write("Enter a Word: ");
+            //Console.Write("Enter a Word: ");
 
-            string Number = Console.ReadLine() ?? "No Data";
+            //string Number = Console.ReadLine() ?? "No Data";
 
-            for (int i = Number.Length - 1; i >= 0; i--)
-                Console.Write(Number[i]);
+            //for (int i = Number.Length - 1; i >= 0; i--)
+            //    Console.Write(Number[i]);
 
 
 
+
+
+            #endregion
+
+
+            #region Question 15
+
+            Console.Write("starting number of range: ");
+
+            int Start = int.Parse(Console.ReadLine() ?? "0");
+
+            Console.Write("Ending number of range: ");
+
+            int End = int.Parse(Console.ReadLine() ?? "0");
+
+            Console.WriteLine($"The prime number between {Start} and {End} are: ");
+            for (int i = Start; i <= End; i++)
+            {
+                bool flag = true;
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag && i > 1) 
+                    Console.Write($"{i} ");
+            }
 
 
             #endregion
