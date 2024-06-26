@@ -155,19 +155,44 @@
 
             #region Question 9
 
-            Console.Write("Please Enter two Numbers: ");
+            //Console.Write("Please Enter two Numbers: ");
 
-            int Number1 = int.Parse(Console.ReadLine() ?? "0");
+            //int Number1 = int.Parse(Console.ReadLine() ?? "0");
 
-            int Number2 = int.Parse(Console.ReadLine() ?? "0");
+            //int Number2 = int.Parse(Console.ReadLine() ?? "0");
 
-            int pow = 1;
-            for (int i = 0; i < Number2; i++)
-                pow *= Number1;
+            //int pow = 1;
+            //for (int i = 0; i < Number2; i++)
+            //    pow *= Number1;
 
-            Console.WriteLine(pow);
+            //Console.WriteLine(pow);
 
             #endregion
+
+
+            #region Question 10
+
+            Console.Write("Enter the marks of the five subjects: ");
+
+            int sum = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                sum += int.Parse(Console.ReadLine() ?? "0");
+            }
+            Console.WriteLine($"Total marks = {sum}");
+
+            int avg = sum / 5;
+
+            Console.WriteLine($"Average marks = {avg}");
+
+            double perc = (double)sum / 5;
+
+            Console.WriteLine($"percentage marks = {perc}");
+
+
+            #endregion
+
 
         }
     }
