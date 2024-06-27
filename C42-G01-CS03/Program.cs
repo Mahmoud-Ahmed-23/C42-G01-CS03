@@ -8,8 +8,6 @@ namespace C42_G01_CS03
         static void Main(string[] args)
         {
 
-
-
             #region Question 1
             //Console.WriteLine("Please Enter Your Number: ");
 
@@ -23,7 +21,6 @@ namespace C42_G01_CS03
             //    Console.WriteLine("No");
 
             #endregion
-
 
 
             #region Question 2
@@ -40,7 +37,6 @@ namespace C42_G01_CS03
             //    Console.WriteLine("positive");
 
             #endregion
-
 
 
             #region Question 3
@@ -67,7 +63,6 @@ namespace C42_G01_CS03
             //Console.WriteLine($"Min Element = {min}");
 
             #endregion
-
 
 
             #region Question 4
@@ -361,26 +356,51 @@ namespace C42_G01_CS03
 
             #region Question 18
 
-            Console.WriteLine("Enter the hour Works: ");
+            //Console.WriteLine("Enter the hour Works: ");
 
-            int F_Hour = int.Parse(Console.ReadLine() ?? "0");
+            //int F_Hour = int.Parse(Console.ReadLine() ?? "0");
 
-            int L_Hour = int.Parse(Console.ReadLine() ?? "0");
+            //int L_Hour = int.Parse(Console.ReadLine() ?? "0");
 
-            if (L_Hour < 3)
-                Console.WriteLine("they are considered highly efficient.");
-            else if (L_Hour < 4)
-                Console.WriteLine("they are instructed to increase their speed.");
-            else if (L_Hour < 5)
-                Console.WriteLine("they are provided with training to enhance their speed.");
-            else
-                Console.WriteLine("they are required to leave the company.");
+            //if (L_Hour < 3)
+            //    Console.WriteLine("they are considered highly efficient.");
+            //else if (L_Hour < 4)
+            //    Console.WriteLine("they are instructed to increase their speed.");
+            //else if (L_Hour < 5)
+            //    Console.WriteLine("they are provided with training to enhance their speed.");
+            //else
+            //    Console.WriteLine("they are required to leave the company.");
 
 
             #endregion
 
 
+            #region Question 19
 
+            Console.Write("Enter the size: ");
+
+            int Size = int.Parse(Console.ReadLine() ?? "0");
+
+            int[,] arr = new int[Size, Size];
+
+            int f = 1;
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    arr[i, j] = f++;
+                }
+            }
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    Console.Write($"{arr[i, j]} ");
+                }
+                Console.WriteLine(" ");
+            }
+
+            #endregion
 
         }
     }
