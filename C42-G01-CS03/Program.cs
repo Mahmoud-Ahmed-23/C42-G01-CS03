@@ -406,14 +406,50 @@ namespace C42_G01_CS03
             #region Question 20
 
 
-            int[] arr = { 1, 2, 4, 5, 6 };
+            //int[] arr = { 1, 2, 4, 5, 6 };
 
-            int Sum = 0;
+            //int Sum = 0;
 
-            for (int i = 0; i < arr.Length; i++)
-                Sum += arr[i];
+            //for (int i = 0; i < arr.Length; i++)
+            //    Sum += arr[i];
 
-            Console.WriteLine(Sum);
+            //Console.WriteLine(Sum);
+
+            #endregion
+
+
+            #region Question 21
+
+            int[] arr1 = new int[5] { 1, 5, 2, 3, 4 };
+
+            int[] arr2 = new int[5] { 6, 8, 9, 10, 7 };
+
+            int Size = arr1.Length + arr2.Length;
+
+            int[] merg = new int[Size];
+
+            
+            for (int i = 0; i < arr1.Length; i++)
+                merg[i] = arr1[i];
+            
+            
+            int a = 0;
+
+
+            for (int i = arr1.Length; i < Size; i++)
+            {
+                merg[i] = arr2[a];
+                a++;
+            }
+
+            
+            Array.Sort(merg);
+
+            
+            for (int i = 0; i < Size; i++)
+            {
+                Console.Write($"{merg[i]} ");
+            }
 
             #endregion
 
