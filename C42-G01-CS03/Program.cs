@@ -488,34 +488,53 @@ namespace C42_G01_CS03
 
             #region Question 25
 
-            Console.Write("Enter the Size of an array: ");
+            //Console.Write("Enter the Size of an array: ");
 
-            int Size = int.Parse(Console.ReadLine() ?? "0");
+            //int Size = int.Parse(Console.ReadLine() ?? "0");
 
-            int[] arr = new int[Size];
+            //int[] arr = new int[Size];
 
-            Console.WriteLine("Enter the element of the array");
+            //Console.WriteLine("Enter the element of the array");
 
-            for (int i = 0; i < Size; i++)
-                arr[i] = int.Parse(Console.ReadLine() ?? "0");
+            //for (int i = 0; i < Size; i++)
+            //    arr[i] = int.Parse(Console.ReadLine() ?? "0");
 
-            
 
-            int MaxDistance = 0;
-            
-            int Number = 0;
 
-            for(int i = 0; i < Size;i++)
+            //int MaxDistance = 0;
+
+            //int Number = 0;
+
+            //for(int i = 0; i < Size;i++)
+            //{
+            //    if (MaxDistance < Array.LastIndexOf(arr, arr[i]) - i - 1) 
+            //    {
+            //        MaxDistance = Array.LastIndexOf(arr, arr[i]) - i - 1;
+            //        Number = arr[i];
+            //    }
+            //}
+
+
+            //Console.WriteLine($"the Max Distance between Number({Number}) = {MaxDistance}");
+
+            #endregion
+
+
+            #region Question 26
+
+            Console.Write("Enter a word: ");
+
+            string word = Console.ReadLine() ?? "No Data";
+
+            string[] arr;
+
+            arr = word.Split(' ');
+
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                if (MaxDistance < Array.LastIndexOf(arr, arr[i]) - i - 1) 
-                {
-                    MaxDistance = Array.LastIndexOf(arr, arr[i]) - i - 1;
-                    Number = arr[i];
-                }
+                Console.Write(arr[i] + " ");
             }
-            
 
-            Console.WriteLine($"the Max Distance between Number({Number}) = {MaxDistance}");
 
             #endregion
 
