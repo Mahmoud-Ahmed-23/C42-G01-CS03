@@ -443,28 +443,47 @@ namespace C42_G01_CS03
 
             #region Question 23
 
-            int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
+            //int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
 
-            int max = int.MinValue; int min = int.MaxValue;
+            //int max = int.MinValue; int min = int.MaxValue;
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (max < arr[i])
-                    max = arr[i];
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (max < arr[i])
+            //        max = arr[i];
 
-                if (min > arr[i])
-                    min = arr[i];
-            }
-            Console.WriteLine($"Max Value  = {max} \nMin Value = {min}");
+            //    if (min > arr[i])
+            //        min = arr[i];
+            //}
+            //Console.WriteLine($"Max Value  = {max} \nMin Value = {min}");
 
-            //Console.WriteLine(arr.Max());
+            ////Console.WriteLine(arr.Max());
 
-            //Console.WriteLine(arr.Min());
+            ////Console.WriteLine(arr.Min());
 
             #endregion
 
 
+            #region Question 24
 
+            int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
+
+            int max1 = int.MinValue; int max2 = int.MinValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max1 < arr[i])
+                {
+                    max2 = max1;
+                    max1 = arr[i];
+                }
+
+            }
+            Console.WriteLine($"the second max value  = {max2} ");
+
+
+
+            #endregion
 
 
         }
