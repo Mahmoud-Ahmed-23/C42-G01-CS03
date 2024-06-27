@@ -541,40 +541,50 @@ namespace C42_G01_CS03
 
             #region Question 27
 
-            Console.Write("Enter Your array Size: ");
+            //Console.Write("Enter Your array Size: ");
 
-            int Size = int.Parse(Console.ReadLine() ?? "0");
+            //int Size = int.Parse(Console.ReadLine() ?? "0");
 
-            int[,] arr1 = new int[Size, Size];
+            //int[,] arr1 = new int[Size, Size];
 
-            int[,] arr2 = new int[Size, Size];
+            //int[,] arr2 = new int[Size, Size];
 
-            Console.WriteLine("Enter the Elements of Your Array -->");
+            //Console.WriteLine("Enter the Elements of Your Array -->");
 
-            for (int i = 0; i < Size; i++)
-            {
-                for (int j = 0; j < Size; j++)
-                {
-                    arr1[i, j] = int.Parse(Console.ReadLine() ?? "0");
-                }
-            }
-
-
-            arr2 = arr1;
-
-            for (int i = 0; i < Size; i++)
-            {
-                for (int j = 0; j < Size; j++)
-                {
-                    Console.Write($"{arr2[i, j]} ");
-                }
-                Console.WriteLine("");
-            }
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    for (int j = 0; j < Size; j++)
+            //    {
+            //        arr1[i, j] = int.Parse(Console.ReadLine() ?? "0");
+            //    }
+            //}
 
 
+            //arr2 = arr1;
 
-                #endregion
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    for (int j = 0; j < Size; j++)
+            //    {
+            //        Console.Write($"{arr2[i, j]} ");
+            //    }
+            //    Console.WriteLine("");
+            //}
 
-            }
+            #endregion
+
+
+            #region Question 28
+
+            int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
+
+
+            for (int i = arr.Length - 1; i >= 0; i--)
+                Console.Write(arr[i] + " ");
+
+            #endregion
+
+
+        }
     }
 }
