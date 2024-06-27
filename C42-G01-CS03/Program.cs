@@ -418,34 +418,53 @@ namespace C42_G01_CS03
             #endregion
 
 
-
-
-
-
-
-
-
             #region Question 22
 
-            int[] arr = new int[10] { 1, 2, 2, 3, 4, 5, 5, 1, 4, 7 };
+            //int[] arr = new int[10] { 1, 2, 2, 3, 4, 5, 5, 1, 4, 7 };
 
-            int[] freq = new int[10];
+            //int[] freq = new int[10];
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                freq[arr[i]] += 1;
-            }
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    freq[arr[i]] += 1;
+            //}
 
-            for (int i = 1; i < arr.Length; i++)
-            {
-                if (freq[i] != 0) 
-                Console.Write($"{i} his frequency is {freq[i]}\n");
-            }
+            //for (int i = 1; i < arr.Length; i++)
+            //{
+            //    if (freq[i] != 0) 
+            //    Console.Write($"{i} his frequency is {freq[i]}\n");
+            //}
 
 
 
 
             #endregion
+
+
+            #region Question 23
+
+            int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
+
+            int max = int.MinValue; int min = int.MaxValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                    max = arr[i];
+
+                if (min > arr[i])
+                    min = arr[i];
+            }
+            Console.WriteLine($"Max Value  = {max} \nMin Value = {min}");
+
+            //Console.WriteLine(arr.Max());
+
+            //Console.WriteLine(arr.Min());
+
+            #endregion
+
+
+
 
 
         }
