@@ -377,28 +377,43 @@ namespace C42_G01_CS03
 
             #region Question 19
 
-            Console.Write("Enter the size: ");
+            //Console.Write("Enter the size: ");
 
-            int Size = int.Parse(Console.ReadLine() ?? "0");
+            //int Size = int.Parse(Console.ReadLine() ?? "0");
 
-            int[,] arr = new int[Size, Size];
+            //int[,] arr = new int[Size, Size];
 
-            int f = 1;
-            for (int i = 0; i < Size; i++)
-            {
-                for (int j = 0; j < Size; j++)
-                {
-                    arr[i, j] = f++;
-                }
-            }
-            for (int i = 0; i < Size; i++)
-            {
-                for (int j = 0; j < Size; j++)
-                {
-                    Console.Write($"{arr[i, j]} ");
-                }
-                Console.WriteLine(" ");
-            }
+            //int f = 1;
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    for (int j = 0; j < Size; j++)
+            //    {
+            //        arr[i, j] = f++;
+            //    }
+            //}
+            //for (int i = 0; i < Size; i++)
+            //{
+            //    for (int j = 0; j < Size; j++)
+            //    {
+            //        Console.Write($"{arr[i, j]} ");
+            //    }
+            //    Console.WriteLine(" ");
+            //}
+
+            #endregion
+
+
+            #region Question 20
+
+
+            int[] arr = { 1, 2, 4, 5, 6 };
+
+            int Sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+                Sum += arr[i];
+
+            Console.WriteLine(Sum);
 
             #endregion
 
