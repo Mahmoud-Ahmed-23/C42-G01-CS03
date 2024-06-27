@@ -466,22 +466,56 @@ namespace C42_G01_CS03
 
             #region Question 24
 
-            int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
+            //int[] arr = new int[10] { 1, 9, 2, 3, 4, 11, 5, 19, 4, 7 };
 
-            int max1 = int.MinValue; int max2 = int.MinValue;
+            //int max1 = int.MinValue; int max2 = int.MinValue;
 
-            for (int i = 0; i < arr.Length; i++)
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (max1 < arr[i])
+            //    {
+            //        max2 = max1;
+            //        max1 = arr[i];
+            //    }
+
+            //}
+            //Console.WriteLine($"the second max value  = {max2} ");
+
+
+
+            #endregion
+
+
+            #region Question 25
+
+            Console.Write("Enter the Size of an array: ");
+
+            int Size = int.Parse(Console.ReadLine() ?? "0");
+
+            int[] arr = new int[Size];
+
+            Console.WriteLine("Enter the element of the array");
+
+            for (int i = 0; i < Size; i++)
+                arr[i] = int.Parse(Console.ReadLine() ?? "0");
+
+            
+
+            int MaxDistance = 0;
+            
+            int Number = 0;
+
+            for(int i = 0; i < Size;i++)
             {
-                if (max1 < arr[i])
+                if (MaxDistance < Array.LastIndexOf(arr, arr[i]) - i - 1) 
                 {
-                    max2 = max1;
-                    max1 = arr[i];
+                    MaxDistance = Array.LastIndexOf(arr, arr[i]) - i - 1;
+                    Number = arr[i];
                 }
-
             }
-            Console.WriteLine($"the second max value  = {max2} ");
+            
 
-
+            Console.WriteLine($"the Max Distance between Number({Number}) = {MaxDistance}");
 
             #endregion
 
