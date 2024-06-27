@@ -406,16 +406,47 @@ namespace C42_G01_CS03
             #region Question 20
 
 
-            int[] arr = { 1, 2, 4, 5, 6 };
+            //int[] arr = { 1, 2, 4, 5, 6 };
 
-            int Sum = 0;
+            //int Sum = 0;
 
-            for (int i = 0; i < arr.Length; i++)
-                Sum += arr[i];
+            //for (int i = 0; i < arr.Length; i++)
+            //    Sum += arr[i];
 
-            Console.WriteLine(Sum);
+            //Console.WriteLine(Sum);
 
             #endregion
+
+
+
+
+
+
+
+
+
+            #region Question 22
+
+            int[] arr = new int[10] { 1, 2, 2, 3, 4, 5, 5, 1, 4, 7 };
+
+            int[] freq = new int[10];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                freq[arr[i]] += 1;
+            }
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (freq[i] != 0) 
+                Console.Write($"{i} his frequency is {freq[i]}\n");
+            }
+
+
+
+
+            #endregion
+
 
         }
     }
