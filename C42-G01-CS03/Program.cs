@@ -522,23 +522,59 @@ namespace C42_G01_CS03
 
             #region Question 26
 
-            Console.Write("Enter a word: ");
+            //Console.Write("Enter a word: ");
 
-            string word = Console.ReadLine() ?? "No Data";
+            //string word = Console.ReadLine() ?? "No Data";
 
-            string[] arr;
+            //string[] arr;
 
-            arr = word.Split(' ');
+            //arr = word.Split(' ');
 
-            for (int i = arr.Length - 1; i >= 0; i--)
-            {
-                Console.Write(arr[i] + " ");
-            }
+            //for (int i = arr.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write(arr[i] + " ");
+            //}
 
 
             #endregion
 
 
-        }
+            #region Question 27
+
+            Console.Write("Enter Your array Size: ");
+
+            int Size = int.Parse(Console.ReadLine() ?? "0");
+
+            int[,] arr1 = new int[Size, Size];
+
+            int[,] arr2 = new int[Size, Size];
+
+            Console.WriteLine("Enter the Elements of Your Array -->");
+
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    arr1[i, j] = int.Parse(Console.ReadLine() ?? "0");
+                }
+            }
+
+
+            arr2 = arr1;
+
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    Console.Write($"{arr2[i, j]} ");
+                }
+                Console.WriteLine("");
+            }
+
+
+
+                #endregion
+
+            }
     }
 }
